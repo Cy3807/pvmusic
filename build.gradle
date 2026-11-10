@@ -1,0 +1,33 @@
+plugins { id 'fabric-loom' version '1.17.20' }
+
+version = project.mod_version
+base { archivesName = 'pvmusic' }
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.plasmoverse.com/releases' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    // mp3 解码 (LGPL，打进 jar)
+    implementation 'javazoom:jlayer:1.0.1'
+    include 'javazoom:jlayer:1.0.1'
+    implementation 'org.jflac:jflac-codec:1.5.2'
+    include 'org.jflac:jflac-codec:1.5.2'
+    implementation 'com.tianscar.javasound:jaad:0.9.4'
+    include 'com.tianscar.javasound:jaad:0.9.4'
+    implementation 'net.jthink:jaudiotagger:3.0.1'
+    include 'net.jthink:jaudiotagger:3.0.1'
+    // 只编译用，运行时由玩家安装的 Plasmo Voice 提供
+    compileOnly "su.plo.voice.api:client:${project.plasmovoice_api_version}"
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand 'version': project.version }
+}

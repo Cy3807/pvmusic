@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "pvmusic",
+  "version": "${version}",
+  "name": "Plasmo Voice Music",
+  "description": "把电脑正在播放的音频通过 Plasmo Voice 发出去，可与说话同时进行，且不受 Plasmo Voice 降噪影响。",
+  "authors": ["cy3807"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": { "client": ["cy.pvmusic.PvMusicMod"] },
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*",
+    "plasmovoice": "*"
+  }
+}

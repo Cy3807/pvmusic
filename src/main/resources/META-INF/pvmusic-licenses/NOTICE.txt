@@ -1,0 +1,8 @@
+Plasmo Voice Music includes separately packaged third-party Java libraries:
+- jFLAC Codec 1.5.2, LGPL-2.1-or-later: https://github.com/jflac/jflac
+  Corresponding source: https://repo.maven.apache.org/maven2/org/jflac/jflac-codec/1.5.2/jflac-codec-1.5.2-sources.jar
+- JAAD 0.9.4, Apache License 2.0: https://github.com/Tianscar/jaadec
+  Source: https://repo.maven.apache.org/maven2/com/tianscar/javasound/jaad/0.9.4/jaad-0.9.4-sources.jar
+- JLayer 1.0.1, LGPL: https://github.com/umjammer/jlayer
+- jaudiotagger 3.0.1, LGPL-2.1-or-later: https://bitbucket.org/ijabz/jaudiotagger
+  Source: https://repo.maven.apache.org/maven2/net/jthink/jaudiotagger/3.0.1/jaudiotagger-3.0.1-sources.jar
